@@ -48,7 +48,6 @@ module.exports.getBookCover = async (req, res) => {
 
 // создать книгу | создаём книгу и возвращаем её же вместе с присвоенным **ID**
 module.exports.createBook = (req, res) => {
-  console.log(req.body);
   const {
     title, description, authors, favorite,
     fileCover, fileName,
