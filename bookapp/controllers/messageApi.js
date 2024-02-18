@@ -3,7 +3,7 @@ const Message = require('../models/message');
 // getMessage
 module.exports.getMessage = (req, res) => {
   const { id } = req.params;
-  Message.find({id})
+  Message.find( {bookid: id} )
   .then((messages) => res.status(200).json(messages))
   .catch((e) => {
     console.log(e);

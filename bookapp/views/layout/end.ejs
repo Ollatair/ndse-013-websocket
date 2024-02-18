@@ -17,7 +17,7 @@
         const socket = io.connect('/', {query: `bookId=${bookId}`});
  
         const boxList = document.querySelector('#list');
-        const username = `<%= user.username %>`;
+        const displayName = `<%= user.displayName %>`;
         const inputText = document.querySelector('#text');
         const sendMsg = document.querySelector('#send-msg');
 
@@ -48,7 +48,7 @@
 
         sendMsg.addEventListener('click', () => {
                 socket.emit('message-to-book', {
-                username: username,
+                username: displayName,
                 text: inputText.value,
                 })
                 const messageData = {

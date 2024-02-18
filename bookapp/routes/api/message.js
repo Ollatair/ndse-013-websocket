@@ -7,7 +7,7 @@ const {
   getMessage,
 } = require('../../controllers/messageApi');
 
-router.get('/', getMessage);
+router.get('/:id', getMessage);
 router.post('/', sendMessage);
 
 module.exports = router;
